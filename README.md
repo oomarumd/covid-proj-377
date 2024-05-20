@@ -25,37 +25,45 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the repository:**
    ```bash
     git clone https://github.com/oomarumd/Covid-final-proj.git
+  ```
 2. **Navigate to Project Directory**
   ``` bash
     cd covid19-trends
+  ```
 
 3. **Install NPM**
   ``` bash
     npm install
+  ```
 
 4. **Initialize NPM**
   ``` bash
       npm init
+    ```
 
 5. **Install Express**
   ``` bash
     install express
+  ```
 6. **Install Supabase Client**
   ``` bash
     npm install @supabase/supabase-js
+  ```
 
 7. **Install Axios**
   ``` bash
     npm install axios
+  ```
 
 8. **Install Cors**
   ``` bash
     npm install Cors
+  ```
 
 9. **Install Nodemon**
   ``` bash
     cd npm npm install nodemon
-```
+  ```
 
 ## Running the Application
 Running Locally
