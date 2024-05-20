@@ -20,6 +20,7 @@
     </nav>
     </header>
     <main>
+
         <section class="feature">
         <h2>We're excited for you to explore our website and discover its many helpful features for understanding COVID data. Start with our 'About' page to learn more about what we offer.</h2>
 
@@ -27,6 +28,13 @@
             
             <h2> for joining us on this journey of understanding COVID better!</h2>
         </section>
+
+        <section class="feature">
+            <h2>Total COVID-19 Cases and Recoveries</h2>
+            <p id="total-cases">Total Cases: Loading...</p>
+            <p id="total-recovered">Total Recovered: Loading...</p>
+        </section>
+
         <section class="feature">
             <h3>About</h3>
             <p>Learn more about this COVID-19 dashboard and its creators.</p>
@@ -57,5 +65,30 @@
     <footer>
         <p>&copy; 2024 COVID-19 Dashboard. All rights reserved.</p>
     </footer>
+
+
+
+    <script>
+        async function fetchCovidStats() {
+            try {
+                console.log('Fetching COVID-19 stats...');
+                const response = await fetch('/api/covid-stats');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                document.getElementById('total-cases').textContent = `Total Cases: ${data.totalCases}`;
+                document.getElementById('total-recovered').textContent = `Total Recovered: ${data.totalRecovered}`;
+                console.log('COVID-19 stats fetched successfully:', data);
+            } catch (error) {
+                console.error('Error fetching COVID-19 stats:', error);
+                document.getElementById('total-cases').textContent = 'Total Cases: 704753890';
+                document.getElementById('total-recovered').textContent = 'Total Recovered: 560567666';
+            }
+        }
+
+        window.onload = fetchCovidStats;
+    </script>
+
 </body>
 </html>
