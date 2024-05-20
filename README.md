@@ -23,7 +23,7 @@ Before you begin, ensure you have met the following requirements:
   
 ## Installation
 1. **Clone the repository:**
-   ```bash
+  ```bash
     git clone https://github.com/oomarumd/Covid-final-proj.git
   ```
 2. **Navigate to Project Directory**
@@ -38,8 +38,8 @@ Before you begin, ensure you have met the following requirements:
 
 4. **Initialize NPM**
   ``` bash
-      npm init
-    ```
+    npm init
+  ```
 
 5. **Install Express**
   ``` bash
